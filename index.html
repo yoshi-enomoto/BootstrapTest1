@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <title>title Dotinstall App</title>
+  </head>
+  <body>
+    <!-- <a href="javascript:histroy.back()" class="btn-primary btn">back</a> -->
+    <!-- デバック用リンク -->
+    <a href="index21.html" class="btn-primary btn">back</a>
+    <a href="original.html" class="btn-primary btn">original</a>
+
+    <header>
+      <!-- noticeエリア -->
+      <div class="alert alert-info text-center mb-0 rounded-0 alert-dismissible fade show">
+        <!-- alertはpaddingを持たせている -->
+        <!-- rounded-0で角丸を消す -->
+        <!-- alert-dismissilbeはdata-dismissと連動 -->
+        <!-- fade showでふわっと消える -->
+        news! news! news! news!
+        <button class="close" data-dismiss="alert">
+            <!-- closeは意味合い？ -->
+            <!-- data-dismiss="alert"でalert-dismissibleと連動 -->
+          &times;
+            <!-- 画面上で×を表す -->
+        </button>
+      </div>
+
+      <!-- ナビエリア -->
+      <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-light">
+          <!-- navで下記の並列2つの並びが変わる -->
+          <!-- navbar-expand-smでsmサイズまではPC仕様、それ以下だとcollapseが現れる -->
+          <a class="navbar-brand" href="">Logo</a>
+            <!-- navbar-brandでLogoのstyleが変わる -->
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+            <!-- ハンバーガーメニューを隠す（広いブラウザの時） -->
+            <!-- data-target属性で開くメニューを指定可能 -->
+            <!-- 指定先はdivで囲った部分、連携方法はid -->
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="menu" class="collapse navbar-collapse">
+            <!-- collapseで折りたたむの意味（以下を折りたたむ） -->
+            <!--  -->
+            <ul class="navbar-nav">
+              <!-- navbar-navが入ると、全てが横並び＆liststyle-none -->
+              <li class="nav-item"><a href="" class="nav-link">link</a></li>
+              <li class="nav-item"><a href="" class="nav-link">link</a></li>
+              <li class="nav-item"><a href="" class="nav-link">link</a></li>
+                <!-- nav-itemとnav-linkでliの間隔と配置、色合いが変わる（nav-lightが適用） -->
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <!-- ヘッダエリア -->
+      <div class="text-white text-center py-5" style="background: url(img/bg.png); background-size: cover;">
+          <!-- divにcenterとwhiteを与えることで、要素内全体に反映される -->
+        <h1 class="display-4 mb-1">Dotinstall App</h1>
+          <!-- 大きさを変えるクラス -->
+        <a href="" class="btn btn-primary btn-lg" >Get It Now!</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- コンテンツ1：文章&画像 -->
+      <section class="py-5">
+        <h2 class="text-center mb-5">Features</h2>
+        <div class="container">
+          <!-- containerクラスを与えることで中央揃えにする（margin auto的な -->
+          <div class="mb-5 row">
+            <div class="col-sm-8">
+              <h3>Awesome</h3>
+              <p>Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello.</p>
+                <!-- .とHの間にはスペースが無いと折り返されない -->
+            </div>
+            <div class="col-sm-4">
+              <img class="w-100 rounded-circle" src="img/phone.png">
+            </div>
+          </div>
+          <div class="row">
+          <!-- <div class="mb-5"> -->
+            <div class="col-sm-8 order-sm-2">
+              <!-- 要素の配置順序の置き換え -->
+              <h3>Awesome</h3>
+              <p>Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello. Hello.</p>
+            </div>
+            <div class="col-sm-4 order-sm-1">
+              <img class="w-100 rounded-circle" src="img/movie.png">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- コンテンツ2:テーブル -->
+      <section class="bg-light text-center py-5">
+        <h2 class="mb-5">Plans</h2>
+        <div class="container">
+          <!-- tableタグの外枠にdivを配置 -->
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Plan A</th>
+                <th>Plan B</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>data</td>
+                <td>datab</td>
+              </tr>
+              <tr>
+                <td>dataa</td>
+                <td>dataabb</td>
+              </tr>
+              <tr>
+                <td>dataaa</td>
+                <td>databb</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- コンテンツ3:タブコンテナ -->
+      <section class="py-4">
+        <h2 class="mb-5 text-center">How to use</h2>
+        <div class="container">
+          <ul class="nav nav-tabs">
+            <!-- タブ箇所はリンクでもあるのでaタグを追加する -->
+            <!-- 遷移先はページ内リンク先となる -->
+            <li nav-item><a href="#ios" class="nav-link" data-toggle="tab">ios</a></li>
+              <!-- 『nav nav-tabs』とnav-item が対応してタブを作る-->
+              <!-- nav-linkを追加することで、レイアウトが綺麗になる（paddingが発生） -->
+            <li nav-item><a href="#android" class="nav-link active" data-toggle="tab">android</a></li>
+              <!-- activeを付けた方がデフォルトで表示される -->
+              <!-- data-toggle="tab"を付けると、jsが不要（切替が連動）：ないとクリックしても切り替わらない -->
+          </ul>
+          <div class="tab-content py-4">
+            <!-- 全体をtab-contentで囲む必要あり -->
+            <!-- tab-paneと連動して、コンテンツとして格納される -->
+            <div id="ios" class="tab-pane">
+              <p>Hello iOS. Hello iOS. <span class="font-weight-bold text-info" data-toggle="tooltip" title="this is programing" data-placement="bottom">Hello iOS. </span>Hello iOS. Hello iOS. Hello iOS. Hello iOS. Hello iOS. Hello iOS. Hello iOS. Hello iOS.</p>
+                <!-- ツールチップの設定：scriptの記載が必要 -->
+                <!-- data-placementで表示場所の変更 -->
+            </div>
+            <div id="android" class="tab-pane active">
+              <p>Hello android. Hello android. Hello android. Hello android. Hello android. Hello android. Hello android. Hello android. Hello android. Hello android. Hello android. </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- コンテンツ4:フッタエリア？ -->
+      <section class="bg-light text-center py-5">
+        <a href="" class="btn btn-primary btn-lg" >Get It Now!</a>
+      </section>
+    </main>
+
+    <footer class="text-center text-muted py-4">
+      Copyright YYYY dotinstall.com
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- ツールチップの設定：scriptの記載箇所 -->
+    <script>
+      $(function() {
+        'use strict';
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+  </body>
+</html>
